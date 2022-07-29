@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Welcome Service",
+    "path": "/",
+    "service": "welcomeController->greetUser",
+    "method": "get",
+    "pre_service": []
+  },
+  {
+    "name": "Ingest Database backup state",
+    "path": "/db/create",
+    "service": "ingestController->record",
+    "method": "post",
+    "pre_service": []
+  }
+]

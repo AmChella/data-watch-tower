@@ -1,0 +1,33 @@
+{
+  "name": "watch-tower",
+  "version": "1.0.0",
+  "description": "Rest Service for crud for json",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmChella/data-watch-tower.git"
+  },
+  "keywords": [
+    "watch-tower",
+    "rest",
+    "service",
+    "for",
+    "json",
+    "data"
+  ],
+  "author": "Chella S",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AmChella/data-watch-tower/issues"
+  },
+  "homepage": "https://github.com/AmChella/data-watch-tower#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "mongoose": "^6.5.0"
+  }
+}
