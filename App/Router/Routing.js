@@ -1,7 +1,7 @@
 import object from "../Config/Routes.json" assert { type: "json" };
 import express from "express";
-import welcomeController from "../Contoller/welcomeController.js";
-import ingestController from "../Contoller/ingestController.js";
+import welcomeController from "../Controller/welcome.js";
+import ingestController from "../Controller/ingest.js";
 const router = express.Router();
 const templateResponse = {
   message: "Welcome to rest service monitoring",
@@ -11,11 +11,11 @@ const templateResponse = {
   data: [],
 };
 export default class Routing {
-  runController(req, res, item) {
+  async runController(req, res, item) {
     let service = item["service"].split("->");
     let klass = eval(service[0]);
     let klassIns = new klass();
-    return klassIns[service[1]](req);
+    return await klassIns[service[1]](req);
   }
 
   run(app) {
@@ -33,9 +33,8 @@ export default class Routing {
           });
           break;
         case "post":
-          router.post(item["path"], (req, res) => {
-            let response = this.runController(req, res, item);
-            console.log(response);
+          router.post(item["path"], async (req, res) => {
+            let response = await this.runController(req, res, item);
             res.json(response);
           });
           break;

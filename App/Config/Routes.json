@@ -8,7 +8,7 @@
   },
   {
     "name": "Ingest Database backup state",
-    "path": "/db/create",
+    "path": "/db/backup",
     "service": "ingestController->record",
     "method": "post",
     "pre_service": []

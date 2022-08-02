@@ -4,31 +4,5 @@
     "username": "root",
     "password": "mongo",
     "host": "mongo"
-  },
-  "db_backup": {
-    "ip": {
-      "required": true,
-      "type": "String"
-    },
-    "name": {
-      "required": true,
-      "type": "String"
-    },
-    "date": {
-      "required": true,
-      "type": "String"
-    },
-    "databases": {
-      "required": true,
-      "type": "String"
-    },
-    "location": {
-      "required": true,
-      "type": "String"
-    },
-    "filename": {
-      "required": true,
-      "type": "String"
-    }
   }
 }
